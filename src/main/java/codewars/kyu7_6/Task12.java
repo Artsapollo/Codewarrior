@@ -26,7 +26,6 @@ public class Task12 {
 
     public static void main(String[] args) {
         int[] numbers = new int[]{1234, 5678, 9012};
-
         twoSum(numbers, 14690);
     }
 }

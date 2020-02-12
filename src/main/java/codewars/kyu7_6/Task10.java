@@ -55,8 +55,8 @@ public class Task10 {
     }
 }
 
-//best practise
 /*
+            Faster
 public static String print(int n) {
     if (n % 2 == 0 || n < 0) {
       return null;

@@ -19,9 +19,6 @@ public class Task7 {
 
     public static void main(String[] args) {
         String str1 = "1234";
-        String str2 = "605";
-        String str3 = "1405";
-        String str4 = "-7";
         System.out.println(stringToNumber(str1));
     }
 }

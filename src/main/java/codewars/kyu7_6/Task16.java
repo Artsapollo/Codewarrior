@@ -19,7 +19,6 @@ public class Task16 {
     public static int[] isPerfectPower(int n) {
 
         int res = 1;
-
         for(int i = 1; i < n; i++){
             for(int j = i; j < n; j++){
                 if(res != n){
@@ -27,14 +26,6 @@ public class Task16 {
                 }
             }
         }
-
         return null;
-    }
-
-    public static void main(String[] args) {
-        int[] var4 = isPerfectPower(4);
-        int[] var5 = isPerfectPower(5);
-        int[] var8 = isPerfectPower(8);
-        int[] var9 = isPerfectPower(9);
     }
 }

@@ -41,6 +41,8 @@ public class Task1 {
     }
 }
 /*
+        Faster
+
     return Arrays.stream(words.split(" "))
       .sorted(Comparator.comparing(s -> Integer.valueOf(s.replaceAll("\\D", ""))))
       .reduce((a, b) -> a + " " + b).get();

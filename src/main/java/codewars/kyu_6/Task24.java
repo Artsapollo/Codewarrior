@@ -10,13 +10,10 @@ Everytime you press the button it sends you an array of one-letter strings repre
  */
 public class Task24 {
     public static void main(String[] args) {
-//        System.out.println(isValid(new char[]{'n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's'}));
-//        System.out.println(isValid(new char[]{'n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's'}));
         System.out.println(isValid(new char[]{'n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 'n'}));
     }
-       // My solution (Not works well)
 
-        public static boolean isValid(char[] walk) {
+    public static boolean isValid(char[] walk) {
         int n = 0;
         int s = 0;
         int w = 0;
@@ -61,28 +58,4 @@ public class Task24 {
 
         return false;
     }
-
-    //    public static boolean isValid(char[] walk) {
-//        //Best practise
-//        if (walk.length != 10) {
-//            return false;
-//        }
-//
-//        int x = 0;
-//        int y = 0;
-//        for (int i = 0; i < 10; i++) {
-//            switch (walk[i]) {
-//                case 'n': x++;
-//                    break;
-//                case 's': x--;
-//                    break;
-//                case 'w': y++;
-//                    break;
-//                case 'e': y--;
-//                    break;
-//            }
-//        }
-//        return x == 0 && y == 0;
-//    }
-
 }

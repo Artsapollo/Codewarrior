@@ -17,10 +17,6 @@ public class Task2 {
         System.out.println(accum("abcd"));
         System.out.println(accum("RqaEzty"));
         System.out.println(accum("cwAt"));
-
-//        accum("abcd"); //"A-Bb-Ccc-Dddd"
-//        accum("RqaEzty"); //"R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
-//        accum("cwAt"); //"C-Ww-Aaa-Tttt"
     }
 }
 
@@ -29,6 +25,8 @@ public class Task2 {
 
 
 /*
+    Faster
+
 StringBuilder result = new StringBuilder();
         int i = 0;
         for (char c : s.toCharArray()) {

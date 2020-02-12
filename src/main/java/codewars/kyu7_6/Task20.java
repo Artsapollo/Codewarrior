@@ -19,9 +19,9 @@ Output string must be two numbers separated by a single space, and highest numbe
  */
 public class Task20 {
     public static void main(String[] args) {
-        System.out.println(highAndLow("1 2 3 4 5"));// return "5 1"
-        System.out.println(highAndLow("1 2 -3 4 5"));// return "5 -3"
-        System.out.println(highAndLow("1 9 3 4 -5"));// return "9 -5"
+        System.out.println(highAndLow("1 2 3 4 5"));
+        System.out.println(highAndLow("1 2 -3 4 5"));
+        System.out.println(highAndLow("1 9 3 4 -5"));
 
     }
 
@@ -54,9 +54,7 @@ public class Task20 {
     }
 
     /*
-    Best practise
-
-
+                 Faster
         int min = Arrays.stream(numbers.split(" "))
                         .mapToInt(i -> Integer.parseInt(i))
                         .min()

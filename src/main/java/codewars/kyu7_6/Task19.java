@@ -10,14 +10,6 @@ If there are less than 2 blue beads return 0.
  */
 
 public class Task19 {
-    public static void main(String[] args) {
-        System.out.println("Result 1 - "+countRedBeads(2));
-        System.out.println("Result 2 - "+countRedBeads(3));
-        System.out.println("Result 3 - "+countRedBeads(4));
-        System.out.println("Result 4 - "+countRedBeads(5));
-        System.out.println("Result 5 - "+countRedBeads(6));
-    }
-
     public static int countRedBeads(final int nBlue) {
         int redCount = 2;
         int result = 0;
@@ -28,12 +20,12 @@ public class Task19 {
                 result += redCount;
             }
         }
-
-        //Best practise
-//    public static int countRedBeads(final int n) {
-//      return n < 2 ? 0 : 2*n - 2;
-//    }
-
         return result;
     }
 }
+/*
+        Faster
+    public static int countRedBeads(final int n) {
+      return n < 2 ? 0 : 2*n - 2;
+    }
+ */

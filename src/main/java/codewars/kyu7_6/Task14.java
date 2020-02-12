@@ -14,7 +14,6 @@ songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB")
  */
 public class Task14 {
     public static String SongDecoder(String song) {
-//My solution
         String[] erase = song.split("WUB");
 
         StringBuilder db = new StringBuilder();
@@ -26,14 +25,14 @@ public class Task14 {
                 db.append(" " + erase[i]);
             }
         }
-
         return db.toString();
-//Shorter solution
-//return song.replaceAll("(WUB)+", " ").trim();
-
     }
 
     public static void main(String[] args) {
         System.out.println(SongDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"));
     }
 }
+/*
+//Faster
+//return song.replaceAll("(WUB)+", " ").trim();
+ */

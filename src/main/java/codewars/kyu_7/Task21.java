@@ -11,7 +11,6 @@ isIsogram "moOse" == false -- ignore letter case
  */
 public class Task21 {
     public static void main(String[] args) {
-//        System.out.println(isIsogram("Dermatoglyphics"));
         System.out.println(isIsogram("moose"));
     }
 
@@ -30,5 +29,6 @@ public class Task21 {
     }
 }
 /*
-Best practise return str.length() == str.toLowerCase().chars().distinct().count();
+Faster
+ return str.length() == str.toLowerCase().chars().distinct().count();
  */

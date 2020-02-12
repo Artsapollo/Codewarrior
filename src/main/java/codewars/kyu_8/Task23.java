@@ -24,10 +24,10 @@ public class Task23 {
         if (n == 1) return 1;
         else result = summation(n - 1) + n;
         return result;
-
-        /*
-        Best practise
-        return  n*(n+1)/2;
-         */
     }
 }
+
+/*
+        Faster
+        return  n*(n+1)/2;
+*/

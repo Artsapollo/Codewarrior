@@ -49,20 +49,3 @@ public class Task29 {
         return countYears;
     }
 }
-/*
-    int countYears = 0;
-
-        while (principal < desired) {
-            if (countYears == 0) {
-                principal += principal * interest;
-                System.out.println(principal);
-            } else{
-                principal += ((principal * interest) - tax);
-                System.out.println(principal);
-            }
-
-            countYears++;
-        }
-
-        return countYears;
- */

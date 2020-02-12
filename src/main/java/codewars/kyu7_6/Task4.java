@@ -27,14 +27,11 @@ public class Task4 {
 
     public static void main(String[] args) {
         int[] input1 = new int[]{1, 2, 3, 4, 5};
-        int[] input2 = new int[]{1, -2, 3, -4, 5};
-        int[] input3 = new int[]{};
-
         System.out.println(invert(input1).toString());
     }
 }
 /*
-Best practices
+        Faster
 public static int[] invert(int[] array) {
     return java.util.Arrays.stream(array).map(i -> -i).toArray();
   }

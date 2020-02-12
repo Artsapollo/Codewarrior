@@ -38,7 +38,7 @@ public class Task6 {
     }
 
     /*
-    Best Practice
+    Faster
      switch (names.length) {
           case 0: return "no one likes this";
           case 1: return String.format("%s likes this", names[0]);

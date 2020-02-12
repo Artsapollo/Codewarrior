@@ -16,8 +16,7 @@ public class Task9 {
                     counter++;
                 }
             }
-//            if (counter % 3 == 0 || counter == 1) odd = i;
-            if ((counter & 1) != 0 ) odd = i;
+            if ((counter & 1) != 0) odd = i;
             counter = 0;
         }
 

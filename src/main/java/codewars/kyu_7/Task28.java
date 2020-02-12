@@ -39,6 +39,8 @@ public class Task28 {
         }
         return wrongChars + "/" + chars;
     }
-    // Best practise
-    // s.replaceAll("[a-m]", "").length() + "/" + s.length();
 }
+/*
+ Faster
+s.replaceAll("[a-m]", "").length() + "/" + s.length();
+ */

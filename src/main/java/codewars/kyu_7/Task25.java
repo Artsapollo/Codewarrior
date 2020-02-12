@@ -21,7 +21,6 @@ Hint: Don't forget to check for bad values like null/undefined
 public class Task25 {
     public static int countSheeps(Boolean[] arrayOfSheeps) {
         int count = (int)Arrays.stream(arrayOfSheeps).filter(a -> (a != null) && a).count();
-
         return count;
     }
 

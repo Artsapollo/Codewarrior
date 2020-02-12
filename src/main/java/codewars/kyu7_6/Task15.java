@@ -16,38 +16,7 @@ a = ["az", "toto", "picaro", "zone", "kiwi"] -->
 public class Task15 {
     public static String[][] partlist(String[] arr) {
 
-        String[][] result = new String[arr.length - 1][2];
-        for (int i = 0; i < arr.length - 1; ++i) {
-            result[i][0] = String.join(" ", Arrays.copyOfRange(arr, 0, i + 1));
-            result[i][1] = String.join(" ", Arrays.copyOfRange(arr, i + 1, arr.length));
-        }
-
-        return result;
-    }
-
-    public static void main(String[] args) {
-        String[][] matrix = partlist(new String[]{"az", "toto", "picaro", "zone", "kiwi"});
-
-    }
-}
-
-//Shorter solution
-/*
-public static String[][] partlist(String[] arr) {
-        String[][] returnArray = new String[arr.length-1][2];
-        for(int i = 0; i < arr.length-1; ++i) {
-          returnArray[i][0] = String.join(" ", Arrays.copyOfRange(arr, 0, i+1));
-          returnArray[i][1] = String.join(" ", Arrays.copyOfRange(arr, i+1, arr.length));
-        }
-
-        return returnArray;
-    }
- */
-
-/*
-My Solution
-
- StringBuilder first = new StringBuilder();
+        StringBuilder first = new StringBuilder();
         StringBuilder second = new StringBuilder();
         String[][] result = new String[arr.length - 1][2];
 
@@ -68,4 +37,19 @@ My Solution
             }
         }
 
+        return result;
+    }
+}
+
+/*
+            Faster
+public static String[][] partlist(String[] arr) {
+        String[][] returnArray = new String[arr.length-1][2];
+        for(int i = 0; i < arr.length-1; ++i) {
+          returnArray[i][0] = String.join(" ", Arrays.copyOfRange(arr, 0, i+1));
+          returnArray[i][1] = String.join(" ", Arrays.copyOfRange(arr, i+1, arr.length));
+        }
+
+        return returnArray;
+    }
  */

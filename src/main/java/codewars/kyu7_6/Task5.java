@@ -19,8 +19,10 @@ public class Task5 {
             result += i * i;
         }
         return result;
-
-        //BestPractice
-        //return Arrays.stream(xs).map(x -> x * x).sum();
     }
 }
+
+/*
+        Faster
+        return Arrays.stream(xs).map(x -> x * x).sum();
+*/
