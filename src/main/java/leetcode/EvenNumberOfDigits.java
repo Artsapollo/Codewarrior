@@ -1,6 +1,6 @@
 package leetcode;
 //https://leetcode.com/problems/find-numbers-with-even-number-of-digits/submissions/
-public class LC1 {
+public class EvenNumberOfDigits {
     public static void main(String[] args) {
         System.out.println(findNumbers(new int[]{12, 345, 2, 6, 7896}));
     }

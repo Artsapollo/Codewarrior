@@ -3,7 +3,7 @@ package leetcode;
 import java.util.Arrays;
 
 //https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
-public class LC2 {
+public class SubtractBetweenSumAndProduct {
     public static void main(String[] args) {
         int n = 234;
         System.out.println(subtractProductAndSum(n));
