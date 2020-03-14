@@ -17,8 +17,13 @@ public class SubtractBetweenSumAndProduct {
             sunn[i] = number.charAt(i) - '0';
         }
 
-        int prod = Arrays.stream(sunn).reduce(1, (a, b) -> a * b);
-        int sum = Arrays.stream(sunn).sum();
+        int prod = 1;
+        int sum = 0;
+
+        for(int j = 0; j < sunn.length; j++){
+            prod = prod * sunn[j];
+            sum = sum + sunn[j];
+        }
 
         return prod - sum;
     }

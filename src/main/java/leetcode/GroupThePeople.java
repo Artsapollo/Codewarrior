@@ -28,6 +28,26 @@ public class GroupThePeople {
     public static List<List<Integer>> groupThePeople(int[] groupSize) {
         List<List<Integer>> groups = new ArrayList<>();
         Map<Integer, List<Integer>> counts = new HashMap<>();
+
+        for (int i = 0; i < groupSize.length; i++) {
+            if (counts.containsKey(groupSize[i])) {
+                counts.get(groupSize[i]).add(i);
+            } else {
+                ArrayList<Integer> group = new ArrayList<>();
+                group.add(i);
+                counts.put(groupSize[i], group);
+            }
+            if (counts.get(groupSize[i]).size() == groupSize[i]) {
+                groups.add(counts.get(groupSize[i]));
+                counts.remove(groupSize[i]);
+            }
+        }
+        return groups;
+    }
+}
+/*
+ List<List<Integer>> groups = new ArrayList<>();
+        Map<Integer, List<Integer>> counts = new HashMap<>();
         for (int i = 0; i < groupSize.length; i++) {
             List<Integer> list = counts.computeIfAbsent(groupSize[i], k -> new ArrayList<>());
             list.add(i);
@@ -37,5 +57,4 @@ public class GroupThePeople {
             }
         }
         return groups;
-    }
-}
+ */

@@ -1,17 +1,18 @@
 package leetcode.BinaryLesson;
 
-import javax.swing.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
+/*
+Given a binary tree, return the preorder traversal of its nodes' values.
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
- * }
+Example:
+Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
+Output: [1,2,3]
  */
 public class PreorderTraversal {
     public List<Integer> preorderTraversal(TreeNode root) {
