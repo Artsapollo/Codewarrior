@@ -10,7 +10,47 @@ public class BasicCalculator2 {
 //        System.out.println("SECOND: " + calculate(" 3/2 "));
 //        System.out.println("THIRD: " + calculate(" 3+5 / 2 "));
 //        System.out.println("FOURS: " + calculate("0-2147483647"));
-        System.out.println("FIFTH: " + calculate("1-1+1"));
+//        System.out.println("FIFTH: " + calculate("1-1+1"));
+//        System.out.println("FIFTH: " + calculate("1*2-3/4+5*6-7*8+9/10"));
+//        System.out.println("SIXTH: " + calculate("2-3-4"));
+        System.out.println("SIXTH: " + calculate("1*2+3*4-5*6+7*8-9*10"));
+        //1*2+3*4-5*6+7*8-9*10
+        //1 2 * 3 4 * 5 6 * 7 8 * 9 10 * - + - +
+        //2 12 30 56 90 - + - +
+        //2 12 30 -34 + - +
+        //2 12 -4 - +
+        //2 16 +
+        //18
+
+        //2 12 30 56 90 + - + -
+        //2 12 30 146 - + -
+        //2 12 -116 + -
+        //2 -134 -
+        //-132
+
+
+
+//  a   b  symbol = '-'
+//  2  -26  -  = -24
+
+//  a  b  symbol = '-'
+// -1  4 -  = -5
+    }
+
+    public static int evaluate(int a, int b, String symbol) {
+        if (b < 0 && symbol.equals("-")) {
+            symbol = "+";
+        }
+        if (symbol.equals("+")) {
+            return a + b;
+        } else if (symbol.equals("-")) {
+            return a - b;
+        } else if (symbol.equals("*")) {
+            return a * b;
+        } else if (symbol.equals("/")) {
+            return a / b;
+        }
+        return 0;
     }
 
     public static int calculate(String s) {
@@ -34,13 +74,12 @@ public class BasicCalculator2 {
                 result.push(evaluate(a, b, p));
             }
         }
-
         return result.get(0);
     }
 
     public static List<String> parse(List<String> tokenized) {
-        List<String> result = new ArrayList<>();
-        Stack<String> stack = new Stack<>();
+        List<String> result = new ArrayList<>(); //числа
+        Stack<String> stack = new Stack<>(); //знаки
 
         for (int i = 0; i < tokenized.size(); i++) {
             String c = tokenized.get(i);
@@ -59,13 +98,14 @@ public class BasicCalculator2 {
                 }
             }
         }
+
         while (!stack.isEmpty()) {
             result.add(stack.pop());
         }
         return result;
     }
 
-    public static List<String> tokenize(String s) {
+    public static List<String> tokenize(String s) { //Собирает цифры в один символ
         List<String> result = new ArrayList<>();
         StringBuilder buffer = new StringBuilder();
 
@@ -85,19 +125,6 @@ public class BasicCalculator2 {
         }
 
         return result;
-    }
-
-    public static int evaluate(int a, int b, String symbol) {
-        if (symbol.equals("+")) {
-            return a + b;
-        } else if (symbol.equals("-")) {
-            return a - b;
-        } else if (symbol.equals("*")) {
-            return a * b;
-        } else if (symbol.equals("/")) {
-            return a / b;
-        }
-        return 0;
     }
 
     public static boolean isDigit(String s) {
