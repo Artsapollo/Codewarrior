@@ -1,7 +1,7 @@
 package leetcode;
 
 import java.util.*;
-
+//Not totally done
 public class BasicCalculator2 {
     static Map<String, Integer> priorities = new HashMap<>();
 
