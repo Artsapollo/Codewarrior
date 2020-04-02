@@ -2,9 +2,6 @@ package leetcode;
 
 import Nodes.TreeNode;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /*
 Example 1:
      1
@@ -21,31 +18,23 @@ Level 3 sum = 7 + -8 = -1.
 So we return the level with the maximum sum which is level 2.
  */
 public class MaximumLevelSum {
-    int level = 0;
-    Map<Integer, Integer> summs = new HashMap<>();
 
     public int maxLevelSum(TreeNode root) {
-
-        if (root == null) {
-            return 0;
+        int[] arr = new int[(int) Math.pow(10, 4) + 1];
+        levels(root, arr, 1);
+        int resultLevel = 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > arr[resultLevel]) {
+                resultLevel = i;
+            }
         }
-
-        checkSum(root);
-        return 1;
+        return resultLevel;
     }
 
-    public void checkSum(TreeNode root) {
-        level++;
-        if (root == null) {
-            return;
-        } else if (level == 1) {
-            summs.put(level, root.val);
-        } else if (root.left != null && root.right != null) {
-            summs.put(level++, (root.left.val + root.right.val));
-        } else if (root.left != null) {
-            checkSum(root.left);
-        } else if (root.right != null) {
-            checkSum(root.right);
-        }
+    public void levels(TreeNode root, int[] arr, int level) {
+        if (root == null) return;
+        arr[level] += root.val;
+        levels(root.left, arr, level + 1);
+        levels(root.right, arr, level + 1);
     }
 }
