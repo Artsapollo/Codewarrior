@@ -16,22 +16,22 @@ Input: [1,null,2,3]
 Output: [3,2,1]
  */
 public class PostorderTraversal {
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> postOrderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root != null) {
-            preorder(root, result);
+            postOrder(root, result);
         }
         return result;
     }
 
-    private void preorder(TreeNode root, List<Integer> result) {
+    private void postOrder(TreeNode root, List<Integer> result) {
 
         if (root.left != null) {
-            preorder(root.left, result);
+            postOrder(root.left, result);
         }
 
         if (root.right != null) {
-            preorder(root.right, result);
+            postOrder(root.right, result);
         }
 
         result.add(root.val);

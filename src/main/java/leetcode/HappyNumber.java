@@ -27,7 +27,7 @@ public class HappyNumber {
         System.out.println(isHappy(1912));
     }
 
-    public static boolean isHappy(int n) {
+    private static boolean isHappy(int n) {
         Set<Integer> list = new HashSet<>();
         int curr = 0;
 
