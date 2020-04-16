@@ -1,4 +1,4 @@
-package leetcode.BinaryLesson;
+package leetcode.binaryLesson;
 
 import Nodes.TreeNode;
 
@@ -6,9 +6,7 @@ public class SearchInBST {
     private TreeNode node = new TreeNode(3);
 
     public TreeNode searchBST(TreeNode root, int val) {
-        if (root != null) {
-            postOrder(root, val);
-        }
+        postOrder(root, val);
 
         if (node.val == 0) {
             return null;
@@ -18,13 +16,11 @@ public class SearchInBST {
     }
 
     public void postOrder(TreeNode root, int val) {
-        if (root.left != null) {
+        if(root == null){
+            return;
+        }
             postOrder(root.left, val);
-        }
-
-        if (root.right != null) {
             postOrder(root.right, val);
-        }
 
         if (root.val == val) {
             node = root;

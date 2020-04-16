@@ -27,7 +27,6 @@ public class LuckyNumbersInAMatrix {
     }
 
     public static int minColInRow(int[][] matrix, int row) {
-        //Найти индекс минимального значения в строке
         int minIndex = 0;
         int minValue = matrix[row][minIndex];
 
@@ -42,8 +41,6 @@ public class LuckyNumbersInAMatrix {
 
 
     public static boolean checkIfMaxInCol(int[][] matrix, int col, int value) {
-        //найти максимальное ли это значение в столбце
-
         for (int i = 0; i < matrix.length; i++) {
             if (value < matrix[i][col]) {
                 return false;

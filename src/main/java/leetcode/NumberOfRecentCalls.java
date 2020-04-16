@@ -4,15 +4,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class NumberOfRecentCalls {
-    public static void main(String[] args) {
-
-    }
-}
-
-class RecentCounter {
     Queue<Integer> queue;
 
-    public RecentCounter() {
+    public NumberOfRecentCalls() {
         queue = new LinkedList<>();
     }
 
