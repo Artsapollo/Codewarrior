@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.TopInterviewQuestions;
 
 public class RemoveDuplicatesArray {
     public static void main(String[] args) {
@@ -8,8 +8,8 @@ public class RemoveDuplicatesArray {
     }
 
     public static int removeDuplicates(int[] nums) {
-
         int index = 0;
+
         for (int i = 0; i < nums.length; i++) {
             if (nums[index] != nums[i]) {
                 index++;

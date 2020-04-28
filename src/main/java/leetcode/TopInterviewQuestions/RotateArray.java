@@ -1,11 +1,11 @@
-package leetcode;
+package leetcode.TopInterviewQuestions;
 
 public class RotateArray {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7};
         rotate(arr, 3);
 
-        for(Integer a : arr){
+        for (Integer a : arr) {
             System.out.println(a);
         }
     }
