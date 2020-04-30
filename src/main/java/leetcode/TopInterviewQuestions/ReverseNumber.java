@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.TopInterviewQuestions;
 
 //input 123
 //output 321
@@ -6,8 +6,7 @@ public class ReverseNumber {
     public static void main(String[] args) {
 //        System.out.println(reverse(123));
         System.out.println(reverse(1534236469));
-    } //9 646 324 351
-
+    }
     public static int reverse(int x) {
             long result = 0;
 
