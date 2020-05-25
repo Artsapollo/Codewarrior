@@ -1,4 +1,4 @@
-package leetcode.TopInterviewQuestions;
+package leetcode.TopInterviewQuestions.string;
 
 public class FirstUniqueCharacterInString {
     public static void main(String[] args) {

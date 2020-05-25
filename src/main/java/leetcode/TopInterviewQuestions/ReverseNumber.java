@@ -4,8 +4,8 @@ package leetcode.TopInterviewQuestions;
 //output 321
 public class ReverseNumber {
     public static void main(String[] args) {
-//        System.out.println(reverse(123));
-        System.out.println(reverse(1534236469));
+        System.out.println(reverse(-123));
+//        System.out.println(reverse(1534236469));
     }
     public static int reverse(int x) {
             long result = 0;
