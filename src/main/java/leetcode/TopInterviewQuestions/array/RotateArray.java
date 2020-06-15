@@ -1,7 +1,5 @@
 package leetcode.TopInterviewQuestions.array;
 
-import java.util.Arrays;
-
 /*
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
@@ -18,15 +16,72 @@ public class RotateArray {
             System.out.println(a);
         }
     }
-//O(n) O(1)
+// Time O(n)
+// Space O(1)
+
+    public static void rotate(int[] arr, int k) {
+        k %= arr.length;
+        reverse(0, arr.length - 1, arr);
+        reverse(0, k - 1, arr);
+        reverse(k, arr.length - 1, arr);
+    }
+
+    public static void reverse(int start, int end, int[] arr) {
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+O(n2)
+         for (int i = 0; i < k; i++) {
+            for (int j = nums.length - 1; j > 0; j--) {
+                int temp = nums[j];
+                nums[j] = nums[j - 1];
+                nums[j - 1] = temp;
+            }
+
+
+// Time O(n)
+// Space O(1)
     public static void rotate(int[] nums, int k) {
         k %= nums.length;
         revers(nums, 0, nums.length - 1);
-        System.out.println(Arrays.toString(nums));
         revers(nums, 0, k - 1);
-        System.out.println(Arrays.toString(nums));
         revers(nums, k, nums.length - 1);
-        System.out.println(Arrays.toString(nums));
     }
 
     public static void revers(int[] arr, int start, int end) {
@@ -38,13 +93,5 @@ public class RotateArray {
             end--;
         }
     }
-}
-/*
-O(n2)
-         for (int i = 0; i < k; i++) {
-            for (int j = nums.length - 1; j > 0; j--) {
-                int temp = nums[j];
-                nums[j] = nums[j - 1];
-                nums[j - 1] = temp;
-            }
+
  */

@@ -7,21 +7,41 @@ public class SingleNumber {
     }
 
     public static int singleNumber(int[] nums) {
-        int count = 0;
-        int result = 0;
-
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums.length; j++) {
-                if (nums[i] == nums[j]) {
-                    count++;
-                }
-
-                if (count == 1) {
-                    result = nums[i];
-                }
-            }
-            count = 0;
+        int index = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            index = index ^ nums[i];
         }
-        return result;
+        return 0;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  int index = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            index = index ^ nums[i];
+        }
+        return index;
+ */
