@@ -1,4 +1,4 @@
-package leetcode.TopInterviewQuestions;
+package leetcode.TopInterviewQuestions.string;
 
 //input 123
 //output 321
