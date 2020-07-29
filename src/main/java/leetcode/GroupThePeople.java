@@ -23,6 +23,7 @@ public class GroupThePeople {
     public static void main(String[] args) {
         int[] groupSizes = new int[]{3, 3, 3, 3, 3, 1, 3};
         List<List<Integer>> result = groupThePeople(groupSizes);
+        System.out.println(result);
     }
 
     public static List<List<Integer>> groupThePeople(int[] groupSize) {
