@@ -9,7 +9,7 @@ public class DuplicateZeros {
         System.out.println(Arrays.toString(arr));
     }
 
-    public static void duplicateZeros(int[] arr) {
+    private static void duplicateZeros(int[] arr) {
         int psbl = 0;
         int lngth = arr.length - 1;
 
